@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="15702" systemVersion="19C57" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="CDExercise" representedClassName=".CDExercise" syncable="YES" codeGenerationType="class">
+        <attribute name="difficulty" optional="YES" attributeType="String"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="reps" optional="YES" attributeType="String"/>
+        <attribute name="sets" optional="YES" attributeType="String"/>
+        <attribute name="weight" optional="YES" attributeType="String"/>
+        <relationship name="workout" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CDWorkout" inverseName="exercises" inverseEntity="CDWorkout"/>
+    </entity>
+    <entity name="CDWorkout" representedClassName=".CDWorkout" syncable="YES" codeGenerationType="class">
+        <attribute name="date" optional="YES" attributeType="String"/>
+        <attribute name="difficulty" optional="YES" attributeType="String"/>
+        <attribute name="number_exercises" optional="YES" attributeType="String"/>
+        <relationship name="exercises" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CDExercise" inverseName="workout" inverseEntity="CDExercise"/>
+    </entity>
+    <elements>
+        <element name="CDExercise" positionX="-273.36328125" positionY="17.78515625" width="128" height="133"/>
+        <element name="CDWorkout" positionX="-443.0078125" positionY="19.79296875" width="128" height="103"/>
+    </elements>
+</model>

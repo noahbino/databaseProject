@@ -11,8 +11,10 @@ import UIKit
 class WorkoutCell: UITableViewCell {
 
     @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet weak var startTimeLabel: UILabel!
+    @IBOutlet weak var endTimeLabel: UILabel!
+    @IBOutlet weak var averageRPELabel: UILabel!
     @IBOutlet weak var numberOfExercisesLabel: UILabel!
     
-    @IBOutlet weak var lengthOfWorkoutLabel: UILabel!
     
 }

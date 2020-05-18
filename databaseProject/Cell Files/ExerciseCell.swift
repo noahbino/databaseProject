@@ -13,8 +13,8 @@ class ExerciseCell: UITableViewCell {
     @IBOutlet weak var exerciseNameLabel: UILabel!
     @IBOutlet weak var numberOfSetsLabel: UILabel!
     @IBOutlet weak var difficultyLabel: UILabel!
-    @IBOutlet weak var weightLabel: UILabel!
     @IBOutlet weak var repsLabel: UILabel!
+    @IBOutlet weak var totalWorkLabel: UILabel!
     
     
 }

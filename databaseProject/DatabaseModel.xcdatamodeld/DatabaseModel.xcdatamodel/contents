@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="16119" systemVersion="19C57" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="CDExercise" representedClassName="CDExercise" syncable="YES" codeGenerationType="class">
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <relationship name="modifiers" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="CDModifier" inverseName="exercise" inverseEntity="CDModifier"/>
+        <relationship name="sets" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="CDSet" inverseName="exercises" inverseEntity="CDSet"/>
+        <relationship name="workouts" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CDWorkout" inverseName="exercises" inverseEntity="CDWorkout"/>
+    </entity>
+    <entity name="CDModifier" representedClassName="CDModifier" syncable="YES" codeGenerationType="class">
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="type" optional="YES" attributeType="String"/>
+        <relationship name="exercise" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="CDExercise" inverseName="modifiers" inverseEntity="CDExercise"/>
+    </entity>
+    <entity name="CDSet" representedClassName="CDSet" syncable="YES" codeGenerationType="class">
+        <attribute name="reps" optional="YES" attributeType="String"/>
+        <attribute name="rpe" optional="YES" attributeType="String"/>
+        <attribute name="sessionID" optional="YES" attributeType="String"/>
+        <attribute name="setID" optional="YES" attributeType="String"/>
+        <attribute name="setIndex" optional="YES" attributeType="String"/>
+        <attribute name="weight" optional="YES" attributeType="String"/>
+        <relationship name="exercises" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="CDExercise" inverseName="sets" inverseEntity="CDExercise"/>
+        <relationship name="workout" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="CDWorkout" inverseName="sets" inverseEntity="CDWorkout"/>
+    </entity>
+    <entity name="CDWorkout" representedClassName="CDWorkout" syncable="YES" codeGenerationType="class">
+        <attribute name="date" optional="YES" attributeType="String"/>
+        <attribute name="endTime" optional="YES" attributeType="String"/>
+        <attribute name="notes" optional="YES" attributeType="String"/>
+        <attribute name="rpe" optional="YES" attributeType="String"/>
+        <attribute name="sessionKey" optional="YES" attributeType="String"/>
+        <attribute name="startTime" optional="YES" attributeType="String"/>
+        <attribute name="userKey" optional="YES" attributeType="String"/>
+        <relationship name="exercises" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="CDExercise" inverseName="workouts" inverseEntity="CDExercise"/>
+        <relationship name="sets" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="CDSet" inverseName="workout" inverseEntity="CDSet"/>
+    </entity>
+    <elements>
+        <element name="CDExercise" positionX="-244.63671875" positionY="-191.36328125" width="130.47265625" height="103"/>
+        <element name="CDModifier" positionX="39.734375" positionY="-236.046875" width="128" height="88"/>
+        <element name="CDSet" positionX="118.1953125" positionY="-100.42578125" width="128" height="163"/>
+        <element name="CDWorkout" positionX="-434.08203125" positionY="-250.76171875" width="147.90234375" height="178"/>
+    </elements>
+</model>

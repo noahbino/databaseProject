@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "group:CDSet+CoreDataClass.swift">
+   </FileRef>
+   <FileRef
+      location = "group:CDSet+CoreDataProperties.swift">
+   </FileRef>
+   <FileRef
+      location = "group:CDExercise+CoreDataClass.swift">
+   </FileRef>
+   <FileRef
+      location = "group:CDExercise+CoreDataProperties.swift">
+   </FileRef>
+   <FileRef
+      location = "group:CDWorkout+CoreDataClass.swift">
+   </FileRef>
+   <FileRef
+      location = "group:CDWorkout+CoreDataProperties.swift">
+   </FileRef>
+   <FileRef
+      location = "group:CDModifier+CoreDataClass.swift">
+   </FileRef>
+   <FileRef
+      location = "group:CDModifier+CoreDataProperties.swift">
+   </FileRef>
+   <FileRef
+      location = "group:databaseProject.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Pods/Pods.xcodeproj">
+   </FileRef>
+</Workspace>
